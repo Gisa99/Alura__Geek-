@@ -1,0 +1,52 @@
+@use '../../variaveis';
+@use '../../mixins';
+
+.input-pesquisa {
+    display: flex;
+    width: 272px;
+    height: 40px;
+    border: 1px solid variaveis.$preto;
+    justify-content: space-between;
+    padding: .3rem;
+    align-items: center;
+    border-radius: 25px;
+    border: none;
+    margin: 0 auto;
+    background-color: variaveis.$cinza-claro;
+    input{
+        @include mixins.ff-fs-cl(variaveis.$fontes, .8rem, variaveis.$preto);
+        border: none;
+        padding-left: 1rem;
+        width: 88%;
+        height: 100%;
+        background-color: variaveis.$cinza-claro;
+        &:focus{
+            box-shadow: 0 0 0 0;
+            border: 0 none;
+            outline: 0;
+        }
+    }
+    .icone-search {
+        height: 20px;
+        margin-right: .5rem;
+    }
+    display: none;
+}
+
+
+@media(min-width: 768px){
+    .input-pesquisa{
+        display: flex;
+    }
+}
+
+@media(min-width: 1280px){
+    .input-pesquisa{
+        display: flex;
+        width: 393px;
+    }
+    .icone-search{
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+}   

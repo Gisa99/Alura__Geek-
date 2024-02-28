@@ -1,0 +1,10 @@
+@use '../../variaveis';
+@use '../../mixins';
+
+.rodape_dev-credito{
+    @include mixins.ff-fs-cl(variaveis.$fontes, 1rem, variaveis.$preto);
+    background-color: variaveis.$branco;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem;
+}

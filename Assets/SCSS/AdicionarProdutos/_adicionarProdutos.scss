@@ -1,0 +1,109 @@
+@use '../mixins';
+@use '../variaveis';
+
+.container__add-produtos{
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    background-color: variaveis.$cinza-claro;
+  
+    .form_adiciona-produto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            @include mixins.ff-fs-cl(variaveis.$fontes, 1.5rem, variaveis.$preto);
+            margin-bottom: 1rem;
+            align-self: flex-start;
+        }
+        fieldset{
+            width: 328px;
+            border: none;
+            margin-bottom: 16px;
+            label{
+                @include mixins.ff-fs-cl(variaveis.$fontes, .8rem, variaveis.$preto);
+                background-color: variaveis.$branco;
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                padding: .6rem;
+                border-radius: 5px;
+                border-bottom: 1px solid variaveis.$cinza;
+                
+                input{
+                    @include mixins.ff-fs-cl(variaveis.$fontes, .8rem, variaveis.$preto);
+                    border: none;
+                    margin-left: 1rem;
+                    &:focus{
+                        border: none;
+                        outline: 0;
+                        box-shadow: 0;
+                        background-color: variaveis.$branco;
+                    }
+                }
+                
+            }
+            textarea{
+                @include mixins.ff-fs-cl(variaveis.$fontes, .9rem, variaveis.$preto);
+                border: none;
+                border-radius: 8px;
+                width: 328px;
+                height: 82px;
+                padding: 1rem;
+                resize: none;
+                border-bottom: 1px solid variaveis.$cinza;
+                &:focus{
+                    outline: 0;
+                    box-shadow: 0;
+                    background-color: variaveis.$branco;
+                    overlay: none;
+                }
+        
+            }
+            
+        }
+        .btn-enviar{
+            @include mixins.ff-fs-cl(variaveis.$fontes, .9rem, variaveis.$branco);
+            width: 328px;
+            border: none;
+            background-color: variaveis.$azul;
+            padding: .8rem;
+            cursor: pointer;
+            transition: .4s ease;
+            font-weight: 600;
+            &:hover{
+                background-color: variaveis.$branco;
+                border: 1px solid variaveis.$azul;
+                color: variaveis.$azul;
+            }
+            
+        }
+        
+    
+    }
+    
+}
+
+@media(min-width: 768px){
+    .container__add-produtos{
+        .form_adiciona-produto{
+            fieldset{
+                width: 100%;
+            }
+            fieldset textarea, .btn-enviar{
+                width: 100%;
+            }
+        }
+    }   
+}
+
+@media(min-width: 1280px){
+    .container__add-produtos{
+    
+        .form_adiciona-produto{
+            width: 559px;
+        }
+    }   
+}
+
+

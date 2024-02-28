@@ -1,0 +1,78 @@
+@use '../../variaveis';
+@use '../../mixins';
+
+#rodape{
+    background-color: variaveis.$azul-claro;
+    padding-top: 1.5rem;
+    .rodape__links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .rodape__logo{
+            height: 50px;
+        }
+        .rodape__link-list{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li{
+                padding: 8px;
+            }
+            
+            a{
+                @include mixins.ff-fs-cl(variaveis.$fontes, 1rem, variaveis.$preto);
+                text-align: center;
+                text-decoration: none;
+                &:hover{
+                    color: variaveis.$azul;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+   
+}
+
+@media(min-width: 766px){
+    #rodape div{
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 1280px){
+    #rodape div{
+        padding: 32px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        
+      .rodape__links{
+         flex-direction: row;
+         width: 50%;
+         justify-content: space-around;
+         align-items: flex-start;
+         .rodape__logo{
+            width: 176px;
+         }
+         .rodape__link-list{
+            align-items: normal;
+            gap: 1rem;
+
+           li{
+            
+            max-width: 100%;
+             a{
+                text-align: left;
+
+             }
+            
+           }
+           
+         }
+      }
+    }
+}

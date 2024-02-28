@@ -1,0 +1,62 @@
+@use '../../variaveis';
+@use '../../mixins';
+
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    .cabecalho__logo{
+        display: block;
+    }
+    a{
+        text-decoration: none;
+        .cabecalho__btn-login{
+            @include mixins.ff-fs-cl(variaveis.$fontes, 1rem, variaveis.$azul);
+            font-weight: 600;
+            width: 133px;
+            height: 40px;
+            border: 1px solid variaveis.$azul;
+            background-color: variaveis.$branco;
+            transition: .3s;
+            display: block;
+            &:hover{
+                background-color: variaveis.$azul;
+                color: variaveis.$branco;
+            }  
+        }
+        
+    }
+    
+}
+
+@media(min-width: 768px) and (max-width: 1280px){
+    .cabecalho__logo-img{
+       width: 130px;
+    }
+    .cabecalho__btn-search{
+        display: none;
+    }
+    .cabecalho__btn-login{
+        width: 166px;
+        margin-left: 134px;
+    }  
+}
+
+@media(min-width: 1280px){
+    #cabecalho{
+        padding: 34px 152px;
+    }
+    .cabecalho__btn-search{
+        display: none;
+    }
+    .cabecalho__logo-img{
+        width: 176px;
+    }
+    .cabecalho__btn-login{
+        width: 182px;
+        margin-left: 253px;
+        cursor: pointer;  
+    }  
+
+}

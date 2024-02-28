@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/SCSS/estilos.css">
+    <title>Alura Geek</title>
+</head>
+<body>
+    <header class="cabecalho" id="cabecalho">
+        <a href="index.html" class="cabecalho__logo">
+            <img src="Assets/imagens/Logo.svg" alt="Logo AluraGeek" class="cabecalho__logo-img">
+        </a>
+        <div class="input-pesquisa">
+            <input type="text" placeholder="O que deseja encontrar?" class="search">
+            <img src="Assets/imagens/search.svg" class="icone-search" alt="ícone pesquisa">
+        </div>
+        <a href="Assets/Pages/login.html"><button class="cabecalho__btn-login">Login</button></a>
+        <div class="input-pesquisa-mobile">
+            <input type="text" placeholder="O que deseja encontrar?" class="search-mobile">
+            <img src="Assets/imagens/sair.png" class="icone-sair" alt="ícone sair">
+        </div>
+        <img src="Assets/imagens/search.svg" alt="botão pesquisa" class="cabecalho__btn-search">
+    </header>
+    <main class="container_principal" id="container_principal">
+        <section class="container_principal-banner">
+            <h1 class="banner__titulo">Fevereiro Promocional</h1>
+            <p class="banner__texto">Produtos selecionados com 33% de desconto</p>
+            <a href="#consoles"><button class="banner__btn">Ver Consoles</button></a>
+        </section>
+        <span class="result-pesquisa" id="lista">
+            
+        </span>
+        <section class="container_principal-cards" class="starwars">
+            <div class="cards__title">
+                <h2 class="title">Star Wars</h2>
+                <div class="vertudo"><a href="Assets/Pages/login.html">Ver Tudo</a><img src="Assets/imagens/arrow_back_black_24dp 1.svg" alt="botão ver tudo"></div>
+            </div>
+            <div class="cards" id="starwars"></div>
+        </section>
+        <section class="container_principal-cards" class="consoles">
+            <div class="cards__title">
+                <h2 class="title">Consoles</h2>
+                <div class="vertudo"><a href="#">Ver Tudo</a><img src="Assets/imagens/arrow_back_black_24dp 1.svg" alt="botão ver tudo"></div>
+            </div>
+            <div class="cards" id="consoles"></div> 
+        </section>
+        <section class="container_principal-cards" class="diversos">
+            <div class="cards__title">
+                <h2 class="title">Diversos</h2>
+                <div class="vertudo"><a href="#">Ver Tudo</a><img src="Assets/imagens/arrow_back_black_24dp 1.svg" alt="botão ver tudo"></div>
+            </div>
+            <div class="cards" id="diversos"></div> 
+        </section>
+    </main>
+    <footer class="rodape" id="rodape">
+        <div>
+            <section class="rodape__links">
+                <img src="Assets/imagens/Logo.svg" alt="Logo AluraGeek" class="rodape__logo">
+                <ul class="rodape__link-list">
+                    <li><a href="#">Quem somos nós</a></li>
+                    <li><a href="#">Políticas de privacidade</a></li>
+                    <li><a href="#">Nossas lojas</a></li>
+                    <li><a href="#">Quero ser franqueado</a></li>
+                    <li><a href="#">Anuncie aqui</a></li>
+                    <li><a href="#">Programas de fidelidade</a></li>
+                </ul>
+            </section>
+            <section class="rodape__contato">
+                
+                <form  class="rodape__contato-form" 
+                data-formulario>
+                    <h3>Fale conosco</h3>
+                    <fieldset class="form-name">
+                        <label for="email" data-erro>E-mail</label>
+                        <input type="email" name="email" id="email"  required minlength="3">
+                        <span class="mensagem-erro"></span>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Escreva sua mensagem" required minlength="5" data-erro></textarea>
+                        <span class="mensagem-erro"></span>
+                   </fieldset>
+                   <input class="rodape__contato-btn" type="submit" required></input>
+                </form>
+            </section>
+        </div>
+        <section class="rodape_dev-credito">
+            <p>Desenvolvido por <a href="#">Gisele França</a>
+            </p>
+            <p>2024</p>
+        </section>
+    </footer>
+    
+    <script src=" Assets/Javascript/exibirMenuPesquisa.js"></script>
+    <script type="module" src="Assets/Javascript/Components/renderizaCards.js"></script>
+    <script type="module" src="Assets/Javascript/Search/buscaProdutos.js"></script>
+    <script src="Assets/Javascript/Components/validaFormularioRodape.js"></script>
+    
+</body>
+</html>
