@@ -10,10 +10,10 @@
     gap: 1rem;
     margin: 0 auto;
     overflow: auto;
-    
-    
-    .container__principal-cards{
-        .cards{
+ 
+    .container__result-cards{
+       
+        .result-cards{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -68,7 +68,8 @@
 
 @media(min-width: 768px) and (max-width: 1280px){
     .result-pesquisa{
-        .container__principal-cards{
+        overflow: hidden;
+        .container__result-cards{
             &:nth-child(n+4){
                 display: none;
             }
@@ -77,8 +78,9 @@
 }
 @media(min-width: 1280px){
     .result-pesquisa{
+        overflow: hidden;
         padding: 32px 152px;
-        .container__principal-cards{
+        .container__result-cards{
             &:nth-child(n+7){
                 display: none;
             }

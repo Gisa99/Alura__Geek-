@@ -536,7 +536,7 @@
   margin: 0 auto;
   overflow: auto;
 }
-.result-pesquisa .container__principal-cards .cards {
+.result-pesquisa .container__result-cards .result-cards {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -548,11 +548,11 @@
   list-style: none;
   cursor: pointer;
 }
-.result-pesquisa .container__principal-cards .cards .cards_produto-img img {
+.result-pesquisa .container__result-cards .result-cards .cards_produto-img img {
   width: 100%;
   height: 174px;
 }
-.result-pesquisa .container__principal-cards .cards .cards_produto-title {
+.result-pesquisa .container__result-cards .result-cards .cards_produto-title {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   color: #464646;
@@ -560,14 +560,14 @@
   margin-left: 0.3rem;
   height: 2.3rem;
 }
-.result-pesquisa .container__principal-cards .cards .cards_produto-preco {
+.result-pesquisa .container__result-cards .result-cards .cards_produto-preco {
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   color: #464646;
   font-weight: 700;
   margin: 0.3rem;
 }
-.result-pesquisa .container__principal-cards .cards .cards_produto-verproduto {
+.result-pesquisa .container__result-cards .result-cards .cards_produto-verproduto {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   color: #2A7AE4;
@@ -575,7 +575,7 @@
   text-decoration: none;
   margin-left: 0.3rem;
 }
-.result-pesquisa .container__principal-cards .cards .cards_produto-verproduto:hover {
+.result-pesquisa .container__result-cards .result-cards .cards_produto-verproduto:hover {
   color: #054ca8;
   font-weight: 700;
 }
@@ -593,15 +593,19 @@
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
-  .result-pesquisa .container__principal-cards:nth-child(n+4) {
+  .result-pesquisa {
+    overflow: hidden;
+  }
+  .result-pesquisa .container__result-cards:nth-child(n+4) {
     display: none;
   }
 }
 @media (min-width: 1280px) {
   .result-pesquisa {
+    overflow: hidden;
     padding: 32px 152px;
   }
-  .result-pesquisa .container__principal-cards:nth-child(n+7) {
+  .result-pesquisa .container__result-cards:nth-child(n+7) {
     display: none;
   }
 }

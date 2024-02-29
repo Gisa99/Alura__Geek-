@@ -10,9 +10,9 @@ const inputPesquisaMobile = document.querySelector(".search-mobile");
 function renderizaItens( imageURL, name, price){
   
     const novoProduto = document.createElement("section");
-    novoProduto.className = "container__principal-cards";
+    novoProduto.className = "container__result-cards";
     novoProduto.innerHTML = `
-     <ul class="cards">
+     <ul class="result-cards">
         <li class="cards_produto-img"><img src="${imageURL}" alt=""></li>
         <li class="cards_produto-title">${name}</li>
         <li class="cards_produto-preco">${price}</li>
