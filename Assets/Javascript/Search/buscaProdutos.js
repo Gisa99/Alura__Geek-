@@ -14,7 +14,7 @@ function renderizaItens( imageURL, name, price){
     novoProduto.innerHTML = `
      <ul class="cards">
         <li class="cards_produto-img"><img src="${imageURL}" alt=""></li>
-        <li class="cards_produto-title">${name}o</li>
+        <li class="cards_produto-title">${name}</li>
         <li class="cards_produto-preco">${price}</li>
         <li><a href="#" class="cards_produto-verproduto">Ver Produto</a><li>
        </ul>

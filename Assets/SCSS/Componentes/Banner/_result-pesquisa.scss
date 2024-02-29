@@ -3,13 +3,17 @@
 @use '../Cards/cards';
 
 .result-pesquisa{
-    width: 80%;
+    width: 100%;
     padding: 16px;
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin: 0 auto;
-    .cards{
+    overflow: auto;
+    
+    
+    .container__principal-cards{
+        .cards{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -50,6 +54,8 @@
       
     }
    
+    }
+  
     .mensagem__titulo{
         @include mixins.ff-fs-cl(variaveis.$fontes, 2rem, variaveis.$azul);
         text-align: center;
