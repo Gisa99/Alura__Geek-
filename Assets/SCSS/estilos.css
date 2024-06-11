@@ -254,9 +254,14 @@
 .container_principal-cards .cards .cards_produto:hover {
   transform: scale(1.05);
 }
+@media (min-width: 1280px) {
+  .container_principal-cards .cards .cards_produto {
+    width: 14%;
+  }
+}
 .container_principal-cards .cards .cards_produto .cards_produto-img img {
   width: 100%;
-  height: 174px;
+  height: 175px;
 }
 .container_principal-cards .cards .cards_produto .cards_produto-title {
   font-family: "Raleway", sans-serif;

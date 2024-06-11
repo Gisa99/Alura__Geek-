@@ -14,10 +14,8 @@
         <a href="renderizaTodos.html" class="cabecalho__logo-login logo-add-produto">
             <img src="../imagens/Logo.svg" alt="Logo AluraGeek" class="cabecalho__logo-img">
         </a>
-       
     </header>
     <main class="container__add-produtos">
-        
         <form class="form_adiciona-produto" data-form>
             <h2 class="title">Adicionar novo produto</h2>    
             <fieldset class="campos-form">
@@ -25,30 +23,30 @@
                     <input id="url-img" type="text" name="url-img" data-imagem>
                 </label>
                 <span class="mensagem-erro"></span>
-              </fieldset>
+            </fieldset>
             <fieldset class="campos-form">
                 <label for="categoria"> Categoria
                     <input id="categoria" type="text" name="categoria" data-categoria>
                 </label>
                 <span class="mensagem-erro"></span>
-              </fieldset>
+            </fieldset>
             <fieldset class="campos-form">
                 <label for="nome"> Nome do produto
                     <input id="nome" type="text" name="nome" data-nome>
                 </label>
                 <span class="mensagem-erro"></span>
-              </fieldset>
+            </fieldset>
             <fieldset class="campos-form">
                 <label for="preco"> Preço do Produto
                     <input id="preco" type="text" name="preco" data-preco>
                 </label>
                 <span class="mensagem-erro"></span>
-              </fieldset>
+            </fieldset>
             <fieldset class="campos-form">
                 <textarea name="mensagem" id="mensagem" placeholder="Descrição do produto" data-descricao></textarea>
                 <span class="mensagem-erro"></span>
-              </fieldset>
-              <input class="btn-enviar" type="submit" value="Enviar">
+            </fieldset>
+            <input class="btn-enviar" type="submit" value="Enviar">
         </form>
     </main>
     <footer class="rodape" id="rodape">
@@ -65,27 +63,23 @@
                 </ul>
             </section>
             <section class="rodape__contato">
-                
-                <form  method="post" autocomplete="off" class="rodape__contato-form" 
-                data-formulario>
+                <form  method="post" autocomplete="off" class="rodape__contato-form" data-formulario required>
                     <h3>Fale conosco</h3>
                     <fieldset class="form-name">
                         <label for="email" data-erro>E-mail</label>
-                        <input type="email" name="email" id="email"  required minlength="3">
+                        <input type="email" name="email" id="email" required minlength="3">
                         <span class="mensagem-erro"></span>
                     </fieldset>
-                    
                     <fieldset>
                         <textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Escreva sua mensagem" required minlength="5" data-erro></textarea>
                         <span class="mensagem-erro"></span>
-                   </fieldset>
-                   <input class="rodape__contato-btn" type="submit" required></input>
+                    </fieldset>
+                    <input class="rodape__contato-btn" type="submit" required>
                 </form>
             </section>
         </div>
         <section class="rodape_dev-credito">
-            <p>Desenvolvido por <a href="#">Gisele França</a>
-            </p>
+            <p>Desenvolvido por <a href="#">Gisele França</a></p>
             <p>2024</p>
         </section>
     </footer>

@@ -49,10 +49,13 @@
             &:hover{
                 transform: scale(1.05);
             }
+            @media(min-width: 1280px){
+                width: 14%;
+            }
             .cards_produto-img{
                 img{
                   width: 100%;
-                  height: 174px;
+                  height: 175px;
                 }
             }
             .cards_produto-title{
